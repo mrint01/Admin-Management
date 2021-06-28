@@ -1,0 +1,40 @@
+{%  extends 'logbase.html.twig' %}
+{% block body %}
+<form action="{{ path('login') }}" method="post">
+
+  <div class="login-box">
+
+  <h1>S'identifier</h1>
+
+  <div class="textbox">
+    {% if app.session.flashBag.has('success') %}
+      <div class="alert alert-success">
+          {% for msg in app.session.flashBag.get('success') %}
+          {{ msg }}
+          {% endfor %}
+        </div>
+    {% endif %}
+    {% if error %}
+    <font size="4" color="red"><div >{{ error.messageKey|trans(error.messageData, 'security') }}</div></font>
+    {% endif %}
+    <br/>
+    <i class="fas fa-user"></i>
+
+    <input type="text"  id="username" name="_username" value="{{ last_username }}" placeholder="Nom d'utilisateur">
+  </div>
+
+  <div class="textbox">
+    <i class="fas fa-lock"></i>
+    <input type="password"  id="password" name="_password"  placeholder="Mot de passe">
+  </div>
+  <center>
+  <div>
+    <a  href="{{ path('forgotten_password') }}"><font color="red">Mot de passe oublié</font></a>
+</div>
+</center>
+	<input type="hidden" name="go_to" value="{{ path('homepage') }}" />
+    <button class="btno" type="submit">s'identifier</button>
+</div>
+
+</form>
+{%  endblock %}

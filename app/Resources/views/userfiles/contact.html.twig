@@ -1,0 +1,76 @@
+{%  extends 'profiluserbase.html.twig' %}
+{% block body %}
+
+
+
+<section id="main">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+      <ol style="width:296px;margin-left:108px;" class="breadcrumb">
+        <li class="active">Contactez nous</li>
+      </ol>
+          <div style="width:296px;margin-left:108px;" class="panel panel-default">
+
+  <div class="panel-body">
+      {% if app.session.flashBag.has('success') %}
+      <div class="alert alert-success text-center">
+          {% for msg in app.session.flashBag.get('success') %}
+          {{ msg }}
+          {% endfor %}
+        </div>
+    {% endif %}
+   <div style="margin-left:22px;"class="col-md-3">
+
+     {{ form_start(form) }}
+
+         <div align="center">
+             {{ form_widget(form.subject) }}
+             {{ form_errors(form.subject) }}
+         </div>
+         <br/>
+         <div>
+             {{ form_widget(form.name) }}
+             {{ form_errors(form.name) }}
+         </div>
+         <div>
+             {{ form_widget(form.email) }}
+             {{ form_errors(form.email) }}
+         </div>
+         <div>
+             {{ form_widget(form.message) }}
+             {{ form_errors(form.message) }}
+         </div>
+
+         {# Render CSRF token etc .#}
+         <div style="display:none">
+             {{ form_rest(form) }}
+         </div>
+         <br/>
+         <button type="submit" class="btn btn-primary">Envoyé</button>
+
+     {{ form_end(form) }}
+
+
+
+   </div>
+ </div>
+</div>
+<!--Latest User-->
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <footer id="footer" style="margin-top: 186px;  padding: 6px;">
+    <p>Copyright ©2019</p>
+  </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script src="dist/js/bootstrap.min.js"></script>
+	{%  endblock %}

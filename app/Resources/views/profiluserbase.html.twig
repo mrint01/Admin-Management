@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="UTF-8" />
+        <title>{% block title %}Profil - User{% endblock %}</title>
+        {% block stylesheets %}
+        <link rel="icon" type="image/x-icon" href="{{ ('//www.digital-communication.tn/wp-content/themes/digital-communication/favicon.ico') }}" />
+        <link rel="stylesheet" href="{{ asset('libs/bootstrap-3.3.7-dist/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/s.css') }}">
+{% endblock %}
+
+        <link href="{{('//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css') }}" rel="stylesheet" id="bootstrap-css">
+
+        <script src="{{('//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js')}}"></script>
+        <script src="{{('//code.jquery.com/jquery-1.11.1.min.js')}}"></script>
+        <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" >
+        <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" >
+
+    </head>
+    <body>
+
+      <header id="header">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-90">
+              <ul  class="nav navbar-nav navbar-right">
+                <a style="margin-left:-64px;" href="{{path('profil_user') }}" ><img style="margin-top:10px;height:26px" src="{{ asset('css/3.png') }}"> </a>
+                <a href="{{path('logout') }}"><img height="23px" style="margin-top:10px;height:31px;margin-left: 19px;" src="https://img.icons8.com/color/48/000000/shutdown.png"></a>
+
+              </ul>
+              <img style="margin-top:11px;height:39px;" src="{{ asset('css/5.png') }}" >
+            </div>
+            <div class="col-md-2">
+
+            </div>
+          </div>
+        </div>
+      </header>
+  <br>
+
+  <div class="col-md-3">
+    <br/><br/><br/>
+    <div class="list-group">
+      <a href="{{path('homepage')}}" class="list-group-item"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+        Tableau de bord <span class="badge"></span>
+      </a>
+      <a href="{{ path('profil_user') }}" class="list-group-item"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Profil <span class="badge"></span></a>
+      <a href="{{ path('usres') }}" class="list-group-item"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Résultats <span class="badge"></span></a>
+      <a href="{{ path('contact') }}" class="list-group-item"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Contactez nous <span class="badge"></span></a>
+      <a href="{{ path('his') }}" class="list-group-item"><span class="glyphicon glyphicon-hdd" aria-hidden="true"></span> historiques <span class="badge"></span></a>
+
+
+
+
+
+  </div>
+
+
+  </div>
+
+
+        {% block body %}{% endblock %}
+        {% block javascripts %}
+        <script src="{{ asset('libs/jquery-3.1.1/jquery-3.1.1.min.js') }}"></script>
+        <script src="{{ asset('libs/bootstrap-3.3.7-dist/js/bootstrap.min.js') }}"></script>
+          {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,69 @@
+{%  extends 'profiluserbase.html.twig' %}
+{% block body %}
+
+
+<section id="main">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <ol class="breadcrumb">
+          <li class="active">Tableau de bord</li>
+        </ol>
+          <div class="panel panel-default">
+
+
+            <br/>
+<div class="row">
+  <div style="margin-left:40px;" class="col-md-3">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 style="color:black;" ><i class="glyphicon glyphicon-open" aria-hidden="true">
+          </i> {{nb_ex}}</h2>
+          <h4> Nombre d'exécution</h4>
+              </div>
+            </div>
+                </div>
+
+
+    <div style="margin-left:40px;" class="col-md-3">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h2 style="color:white;" ><i class="glyphicon glyphicon-export" aria-hidden="true">
+            </i> 5/{{nb_fich}}</h2>
+            <h4> Fichier Traité</h4>
+                </div>
+              </div>
+                  </div>
+
+<div style="margin-left:40px;" class="col-md-3">
+  <div class="panel panel-warning">
+    <div class="panel-heading">
+      <h2 style="color:black;" ><i class="glyphicon glyphicon-list" aria-hidden="true">
+          </i> {{nb_mot_ind}}</h2>
+          <h4> Mots</h4>
+              </div>
+            </div>
+                </div>
+
+          </div>
+
+
+ </div>
+</div>
+<!--Latest User-->
+      </div>
+    </div>
+</section>
+
+
+  <footer id="footer" style="margin-top: 186px;  padding: 6px;">
+    <p>Copyright ©2019</p>
+  </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script src="dist/js/bootstrap.min.js"></script>
+	{%  endblock %}

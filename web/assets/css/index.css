@@ -1,0 +1,91 @@
+	* {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                 
+                font-family: Open Sans, sans-serif;
+            }
+            
+            nav {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                text-align: center;
+                background-color: #000;
+            }
+            nav ul li {
+                list-style: none;
+                display: inline-block;
+            }
+            nav ul li a {
+                display: block;
+                padding: 20px 40px;
+                text-decoration: none;
+                color: #fff;
+                transition: background-color 0.4s ease;
+            }
+            nav ul li a.active {
+                background-color: #666;
+            }
+            
+            section {
+                padding: 12%;
+                text-align: center;
+            }
+            
+            section.about { background-color: #888; }
+            section.team { background-color: #999; }
+            section.gallery { background-color: #aaa; }
+            section.testimonials { background-color: #bbb; }
+            section.contact { background-color: #ccc; }
+            section.home { background-color: #ccc; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.slide {
+ width:100%;
+ margin: auto;
+ overflow: hidden;
+}
+.slide ul {
+ display: flex;
+ padding: 0;
+ width:500%;
+ animation: cambio 15s infinite alternate linear;
+ animation-timing-function: ease-in;
+}
+.slide li {
+ width:100%;
+ list-style: none;
+}
+.slide img {
+ width:100%;
+}
+
+@keyframes cambio{
+  0% { margin-left: 0;}
+ 20% { margin-left: 0;}
+ 
+ 25% { margin-left: -100%;}
+ 45% { margin-left: -100%;}
+ 
+ 50% { margin-left: -200%;}
+ 70% { margin-left: -200%;}
+ 
+ 75% { margin-left: -300%;}
+ 100% { margin-left: -300%;}
+
+
+}
